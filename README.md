@@ -24,7 +24,7 @@ Technologies Used
 
 4)Others: REST APIs for communication between frontend and backend
 
-Link for reference:
+Images for reference:
 
 <img width="345" height="219" alt="Screenshot 2025-12-07 235723" src="https://github.com/user-attachments/assets/db25cd9c-62f8-4b3e-a603-2b7b2b94e9d6" />
 
