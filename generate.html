@@ -1,0 +1,137 @@
+
+
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CertiVault - Generate Certificate</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="brand">CertiVault</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="generate.html" class="active">Generate Certificate</a>
+    <a href="verify.html">Verify Certificate</a>
+  </div>
+</nav>
+
+<main class="container">
+  <h2>Admin — Generate Certificate</h2>
+
+  <p class="muted">Enter admin passphrase to unlock generation.</p>
+
+  <div id="adminBlock" class="card">
+    <label>Admin Passphrase</label>
+    <input id="adminKeyInput" placeholder="Enter admin passphrase">
+    <button id="adminUnlock" class="btn">Unlock</button>
+  </div>
+
+  <form id="genForm" class="card hidden">
+    <label>Student Name</label>
+    <input id="studentName" required>
+
+    <label>Course / Program</label>
+    <input id="courseName" required>
+
+    <label>Date of Issue</label>
+    <input id="issueDate" type="date" required>
+
+    <label>Certificate ID (auto)</label>
+    <input id="certId" readonly>
+
+    <label>Remarks (optional)</label>
+    <input id="remarks">
+
+    <div style="display:flex;gap:8px;margin-top:12px;">
+      <button type="submit" class="btn">Generate Certificate</button>
+      <button id="exportAll" type="button" class="btn alt">Export All</button>
+      <button id="clearAll" type="button" class="btn ghost">Clear All</button>
+      <button id="downloadPDF" type="button" class="btn alt">Download PDF</button>
+    </div>
+
+    <p id="genMsg" class="muted" style="margin-top:10px"></p>
+  </form>
+
+  <div class="card" style="margin-top:16px;">
+    <h3>Preview</h3>
+    <div id="preview" class="preview muted">No certificate yet.</div>
+  </div>
+</main>
+
+<script src="/api.js"></script>
+<script src="/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CertiVault - Generate Certificate</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="brand">CertiVault</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="generate.html" class="active">Generate Certificate</a>
+            <a href="verify.html">Verify Certificate</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Admin — Generate Certificate</h2>
+        <p>Enter admin passphrase to unlock generation.</p>
+
+        <div id="unlockContainer">
+            <input type="password" id="adminPass" placeholder="Enter admin passphrase">
+            <button id="unlockBtn">Unlock</button>
+        </div>
+
+        <form id="generateForm" style="display:none;" class="form-container">
+            <label>Student Name *</label>
+            <input type="text" id="studentName" required>
+
+            <label>Course / Program *</label>
+            <input type="text" id="course" required>
+
+            <label>Date of Issue *</label>
+            <input type="date" id="date" required>
+
+            <label>Remarks (optional)</label>
+            <input type="text" id="remarks">
+
+            <button type="submit">Generate Certificate</button>
+            <button type="button" id="exportAllBtn">Export All</button>
+            <button type="button" id="clearAllBtn">Clear All</button>
+            <button type="button" id="downloadPDFBtn">Download PDF</button>
+        </form>
+
+        <h3>Preview</h3>
+        <div id="preview" class="certificate-box">
+            <p>No certificate yet.</p>
+        </div>
+    </div>
+     
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="script.js"></script>
+
+    <script>
+    if (!localStorage.getItem("loggedIn")) {
+        window.location.href = "login.html";
+    }
+</script>
+
+</body>
+</html>

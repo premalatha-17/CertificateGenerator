@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CertiVault - Home</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="brand">CertiVault</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="generate.html">Generate Certificate</a>
+            <a href="verify.html">Verify Certificate</a>
+        </div>
+    </nav>
+
+    <main class="hero">
+        <h1>CertiVault</h1>
+        <p class="lead">Generate verified certificates for your institute - and let anyone verify them online.</p>
+        <div class="cta">
+            <a href="generate.html" class="btn">Generate (Admin)</a>
+            <a href="verify.html" class="btn alt">Verify</a>
+        </div>
+    </main>
+
+    <section class="features">
+        <div class="card">
+            <h3>Admin-side Generation</h3>
+            <p>Generate unique certificates for students. (Admin-only access)</p>
+        </div>
+        <div class="card">
+            <h3>Public Verification</h3>
+            <p>Anyone can verify a certificate ID to confirm authenticity.</p>
+        </div>
+        <div class="card">
+            <h3>Export / Backup</h3>
+            <p>Admins can export all certificates as JSON for backup.</p>
+        </div>
+    </section>
+
+    <footer class="foot">Made with ❤️ by Prema - CertiVault demo</footer>
+
+    <script src="/script.js"></script>
+    <script src="/api.js"></script>
+
+    <script>
+    if (!localStorage.getItem("loggedIn")) {
+        window.location.href = "login.html";
+    }
+    </script>
+
+    <button onclick="logout()" style="float:right; margin:15px;">Logout</button>
+
+<script>
+function logout() {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "login.html";
+}
+</script>
+
+
+</body>
+</html>

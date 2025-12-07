@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Verify Certificate — CertiVault</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="brand">CertiVault</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="generate.html">Generate Certificate</a>
+            <a href="verify.html" class="active">Verify Certificate</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2>Verify Certificate</h2>
+
+        <label>Enter Certificate ID</label>
+        <input id="verifyInput" placeholder="CERT-...">
+
+        <div style="display:flex; gap:8px; margin-top:10px;">
+            <button id="verifyBtn" class="btn">Verify</button>
+            <button id="sampleBtn" class="btn alt">Use Sample ID</button>
+        </div>
+
+        <div id="verifyResult" class="card" style="margin-top:12px; padding:12px; min-height:100px; color:#000; background:#f8f8f8;">
+            Result will appear here.
+        </div>
+    </main>
+
+    <script src="/script.js"></script>
+
+    <script>
+    if (!localStorage.getItem("loggedIn")) {
+        window.location.href = "login.html";
+    }
+</script>
+
+</body>
+</html>

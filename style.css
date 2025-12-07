@@ -1,0 +1,76 @@
+:root{
+--bg:#f4f7fb; --accent:#5b6ef6; --dark:#0b1220; --muted:#6b7280;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--dark);margin:0}
+.nav{display:flex;justify-content:space-between;padding:14px 24px;background:white;box-shadow:0 2px 8px rgba(6,10,24,0.06);align-items:center}
+.brand{font-weight:700;font-size:18px;color:var(--accent)}
+.nav-links a{margin-left:12px;text-decoration:none;color:var(--dark);padding:6px 8px;border-radius:6px}
+.nav-links a.active{background:rgba(91,110,246,0.12);color:var(--accent)}
+.hero{text-align:center;padding:60px 20px;background:linear-gradient(120deg,#eef2ff,#fff);margin-bottom:18px}
+.hero .lead{color:var(--muted);max-width:720px;margin:12px auto}
+.btn{background:var(--accent);color:white;padding:10px 14px;border-radius:8px;border:none;cursor:pointer;text-decoration:none}
+.btn.alt{background:white;color:var(--accent);border:1px solid rgba(91,110,246,0.15)}
+.btn.ghost{background:transparent;color:var(--muted);border:1px solid rgba(0,0,0,0.04)}
+.container{width:92%;max-width:880px;margin:18px auto}
+.card{background:white;padding:14px;border-radius:10px;box-shadow:0 4px 14px rgba(12,18,36,0.04)}
+.hidden{display:none}
+label{display:block;margin-top:8px;color:var(--muted);font-size:14px}
+input{width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid #e6eef8}
+.preview{min-height:120px;border:1px dashed #e6eef8;padding:12px;border-radius:8px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;padding:18px}
+.card h3{margin-top:0}
+.muted{color:var(--muted)}
+.foot{text-align:center;padding:18px;color:var(--muted)}
+@media (max-width:720px){.nav{flex-direction:column;gap:8px}.hero{padding:36px}}
+
+/* .certificate-box {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding: 25px;
+    background: white;
+    border: 8px solid #e1c16e;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    font-family: 'Georgia', serif;
+    text-align: center;
+} */
+
+
+.certificate-box {
+    width: 100%;
+    max-width: 100%;       /* allow full width */
+    margin: auto;
+    padding: 0;            /* no extra padding that cuts edges */
+    background: white;
+    border: none;          /* remove outer border, your certificate already has border */
+    overflow-x: auto;      /* show full certificate if wide */
+    text-align: center;
+}
+
+
+.cert-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cert-org {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cert-body {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.cert-footer {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+.cert-sign {
+    font-size: 14px;
+}
