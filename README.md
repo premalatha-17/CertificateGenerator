@@ -2,34 +2,24 @@
 
 **CertiGen** is a web application for generating, verifying, and exporting certificates. Designed for educational institutes, it allows admins to create unique certificates for students and provides public verification online.
 
----
+Features
 
-## Features
+1)Generate Certificates: Create certificates with custom details like name, course, date, and unique ID.
 
-- **Admin-side Generation**
-  - Generate unique certificates for students
-  - Optional remarks and date of issue
-  - Preview certificate before saving
+2)Verify Certificates: Validate certificates using a unique Certificate ID.
 
-- **Public Verification**
-  - Anyone can verify a certificate by ID
-  - Shows student name, course, date, and remarks
+3)Secure Access: Optional admin login to manage certificate generation.
 
-- **Export / Backup**
-  - Admins can export all certificates as JSON
-  - Download certificate as PDF
+4)Export Options: Download generated certificates in PDF format.
 
-- **Secure Admin Access**
-  - Login system with admin credentials
-  - Unlock certificate generation with passphrase
+5)Responsive UI: Works across desktop and mobile devices.
 
----
+Technologies Used
 
-## Technologies Used
+1)Frontend: HTML, CSS, JavaScript
 
-- **Frontend:** HTML, CSS, JavaScript
-- **PDF Export:** jsPDF, html2canvas
-- **Backend (optional):** Spring Boot, Java,  MySQL
-- **Hosting:** GitHub Pages (frontend)
+2)Backend: Java, Spring Boot
 
-  
+3)Database: MySQL 
+
+4)Others: REST APIs for communication between frontend and backend
